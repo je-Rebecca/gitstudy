@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="s1" class="com.koreait.spring.Studnet">
+		<property name="name" value="David"/>
+		<property name ="scores" >
+			<list>
+				<value>70</value>
+				<value>90</value>
+				<value>85</value>
+			</list>	
+		</property>
+	</bean>
+</beans>

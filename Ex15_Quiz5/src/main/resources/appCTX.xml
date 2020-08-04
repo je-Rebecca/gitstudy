@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	<context:annotation-config/>
+	<bean class="com.koreait.spring.AnnoCTX"/>
+	<bean id ="p1" class ="com.koreait.spring.Police">
+		<property name="name" value ="제임스"/>
+		<property name="deptInfo">
+			<map>
+				<entry key="depName" value="강력반"/>
+				<entry key="depLocation" value="102호"/>
+			</map>
+		</property>
+		<property name="pistol" ref ="g1"/>
+	</bean>
+</beans>
