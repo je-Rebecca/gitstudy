@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Calculator calc = new Calculator(); -->
+	<bean id ="calc" class ="com.koreait.spring.Calculator"/>
+	
+	<bean id ="myCalc" class ="com.koreait.spring.MyCalculator">
+		<property name="num1">
+			<value>10</value>
+		</property>
+		<property name="num2">
+			<value>3</value>
+		</property>
+		<property name="calculator">
+			<ref bean ="calc"/>
+		</property>
+	</bean>
+<!-- 
+	Calculator calc = new Calculator();
+	MyCalculator myCalc2= new MyCalculator(10,30, calc);   
+-->
+	<bean id ="myCalc2" class="com.koreait.spring.MyCalculator">
+		<constructor-arg>
+			<value>100</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>30</value>
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean ="calc"/>
+		</constructor-arg>
+	</bean>
+</beans>
