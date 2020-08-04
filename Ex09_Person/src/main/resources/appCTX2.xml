@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- 	<bean id ="p" class = "com.koreait.spring.Person">
+		<property name="name" value ="Jen"/><property name="age" value ="30"/>
+		<property name ="car" ref="myCar"/> </bean>-->
+	<bean id ="p" class ="com.koreait.spring.Person" p:name="Jen" p:age="30" p:car-ref="myCar"/>
+	</beans>

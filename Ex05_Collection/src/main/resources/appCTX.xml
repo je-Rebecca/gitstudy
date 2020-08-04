@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id ="handler1" class ="com.koreait.spring.ListHandler">
+		<property name ="list" >
+		<list>
+			<value>라면</value>
+			<value>김밥</value>
+			<value>떡</value>
+			<value>순대</value>
+			<value>떡볶이</value>
+		</list>
+		</property>
+	</bean>
+	<bean id ="handler2" class ="com.koreait.spring.SetHandler">
+		<property name="mySet">
+			<set>
+				<value>서울</value>
+				<value>경기</value>
+				<value>경기</value>
+				<value>서울</value>
+				<value>인천</value>
+			</set>
+		</property>
+	</bean>
+	<bean id="handler3" class="com.koreait.spring.MapHandler">
+		<property name="myMap">
+			<map>
+				<entry key ="name" value =" Ellen"/>
+				<entry key ="age" value ="20" />
+				<entry key ="address" value ="Seoul" />
+				<entry key="gender" value="F" />
+				<entry key="phone" value="010-1111-1111" />
+			</map>
+		</property>		
+	</bean>
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id ="p1" class="com.koreait.spring.Person">
+	<property name="name" value ="Janney" />
+	<property name="age" value ="20" />
+	<property name="gender" value ="F" />
+	<property name="phone" value ="010-222-2222" />
+</bean>
+
+<bean id = "p2" class ="com.koreait.spring.Person">
+	<constructor-arg value ="Tom" />
+	<constructor-arg value ="30" />
+	<constructor-arg value ="M" />
+	<constructor-arg value ="010-333-3333" />
+</bean>
+
+<bean id = "handler1" class ="com.koreait.spring.PersonHandler">
+	<property name ="person" ref ="p1"/>
+</bean>
+
+<bean id ="handler2" class ="com.koreait.spring.PersonHandler">
+	<constructor-arg ref ="p2"/>
+</bean>
+
+</beans>
